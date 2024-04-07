@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+<img src="images/logo.jpg" alt="Logo" class="logo-image" />
+<div class="container">
+  <h1>Create Your Account</h1>
+  <form th:action="@{/createAccount}" th:object="${user}" method="post">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" th:field="*{username}" required />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" th:field="*{email}" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required title="Please enter a valid email address." />
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" th:field="*{password}" required />
+    </div>
+    <div>
+      <label for="confirmPassword">Retype Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required />
+    </div>
+    <div th:if="${errorMessage}" style="color: red;">
+      <p th:text="${errorMessage}"></p>
+    </div>
+    <br>
+    <div>
+      <button type="submit">Create Account</button>
+    </div>
+    <br>
+    <br>
+    <div>
+      <a th:href="@{/}" style="background-color: #8a8aa9; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Back to Login</a>
+    </div>
+  </form>
+</div>
+</body>
+
+<footer>
+  <p>&copy; 2024 Personal Finance Management System. All rights reserved.</p>
+</footer>
+</html>

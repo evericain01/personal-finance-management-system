@@ -1,0 +1,12 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "211125791400.dkr.ecr.your-region.amazonaws.com/pfms-ecr:latest",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "ContainerPort": "8080"
+      }
+    ]
+  }

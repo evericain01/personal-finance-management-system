@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PFMS - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<img src="images/logo.jpg" alt="Logo" class="logo-image"/>
+<div class="container">
+    <header>
+        <h1>Personal Finance Management System</h1>
+    </header>
+
+    <div class="login-box">
+        <h2>Welcome Back!</h2>
+        <p>Login to continue.</p>
+        <form action="#" th:action="@{/login}" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required/>
+            </div>
+            <div th:if="${successMessage}" class="success-message">
+                <span th:text="${successMessage}"></span>
+            </div>
+            <div th:if="${errorMessage}" class="error-message">
+                <p th:text="${errorMessage}"></p>
+            </div>
+            <a th:href="@{/create-account}" style="color: white;">Don't have an account? Create one!</a>
+            <br>
+            <br>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<footer style="margin-top: auto;">
+    <p>&copy; 2024 Personal Finance Management System. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- reports.html -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Reports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+<img src="images/logo.jpg" alt="Logo" class="logo-image"/>
+<form th:action="@{/logout}" method="post" style="position: absolute; top: 10px; right: 10px;">
+    <button type="submit"
+            style="text-decoration: none; background-color: #4CAF50; color: white; font-size: 18px; font-weight: bold; padding: 10px 20px; border-radius: 5px; transition: background-color 0.3s; border: none;">
+        Sign Out
+    </button>
+</form>
+<h1 style="text-align: center;">Reports</h1>
+<div th:replace="fragments/navbar :: navbar"></div>
+<br>
+
+<div>
+    <h2>Expenses Report:</h2>
+    <i><p>To view a report of all expenses, please select a date range.</p></i>
+    <br>
+    <br>
+    <form th:action="@{/download}" method="get">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" required>
+        <br><br>
+        <button type="submit">Download Report</button>
+    </form>
+</div>
+
+</body>
+<footer style="margin-top: auto;">
+    <p>&copy; 2024 Personal Finance Management System. All rights reserved.</p>
+</footer>
+</html>
