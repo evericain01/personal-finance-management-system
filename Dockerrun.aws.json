@@ -1,7 +1,7 @@
 {
     "AWSEBDockerrunVersion": "1",
     "Image": {
-      "Name": "211125791400.dkr.ecr.your-region.amazonaws.com/pfms-ecr:latest",
+      "Name": "211125791400.dkr.ecr.us-east-1.amazonaws.com/pfms-ecr:latest",
       "Update": "true"
     },
     "Ports": [
