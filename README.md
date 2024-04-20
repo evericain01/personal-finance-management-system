@@ -53,3 +53,10 @@ The project already has a Dockerfile, you can use it to build and run a Docker i
 
    ```bash
    docker build -t my-pfms-image .
+
+
+## Docker.run.aws File
+
+The `Docker.run.aws` file is included in this project as a remnant of its original hosting setup on AWS Elastic Beanstalk and AWS RDS (for the database). Originally, the project was deployed by creating and deploying a Docker image onto Elastic Beanstalk, and the database was hosted on AWS RDS. However, this hosting configuration had to be removed due to AWS starting to charge for the services since the subscription moved beyond the free tier option.
+
+For further details on the initial hosting setup and configuration, here is the documentation provided in the [PDF file](https://github.com/evericain01/personal-finance-management-system/files/15046559/Hosting.Documentation.pdf) (Hosting Documentation.pdf) included with this repository.
