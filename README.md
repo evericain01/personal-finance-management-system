@@ -6,12 +6,8 @@ This project is a web-based system aimed at aiding users in personal finance man
 
 1. **Open the Project in IntelliJ IDEA:**
     - After cloning the project, open it in IntelliJ IDEA to start working on it.
-    - Launch IntelliJ IDEA.
-    - Select "Open" or "Import" on the welcome screen.
     - Navigate to the directory where you cloned the PFMS project.
     - Select the project folder and click "Open."
-
-   IntelliJ IDEA will import the project and set it up based on the configuration files found in the project directory.
 
 2. **Install Dependencies with Maven:**
     - The PFMS project uses Maven for dependency management. Once you've opened the project in IntelliJ IDEA, the IDE should automatically recognize the `pom.xml` file and start downloading the necessary dependencies.
